@@ -7,28 +7,37 @@ let pedido_2= 'No'
 let nombre = prompt('Ingrese su Nombre y Apellido').toUpperCase()
 alert('Hola' +' '+ nombre)
 let edad = Number(prompt('Ingrese su Edad'))
-while (isNaN(edad) || edad < 18){
+while (isNaN(edad)){
     alert('Ingrese un Numero Porfavor')
     edad = Number(prompt('Ingrese su Edad'))
 }
 
-if (edad >= 18){
+for (let i = 0; i <= 100; i++){
+
+
+if (edad < 17){
+    alert('No puede ingresar al Establecimiento')
+    edad = Number(prompt('Ingrese su Edad'))
+
+  }else if (edad >=18 ) {
     alert("Bienvenido al Establecimiento")
-    
-  }else if (edad < 17) {
- console.log('No puede ingresar al Establecimiento')
+
+    break
+
   }
-  
+      
+}
   comprar('Comidas')
   comprar ('Bebidas')
+  comprar ('Postres')
  
 
   
 
  
 
-function comprar (comidas, bebidas){
-    let pregunta = prompt('Que ver el menu de ' + ' ' + comidas )
+function comprar (comidas, bebidas, postres){
+    let pregunta = prompt('Quieres ver el menu de ' + ' ' + comidas )
     
     if (pregunta == pedido_1.toLowerCase()){
 

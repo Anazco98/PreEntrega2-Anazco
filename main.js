@@ -6,18 +6,15 @@ let pedido_2= 'No'
 
 let nombre = prompt('Ingrese su Nombre y Apellido').toUpperCase()
 alert('Hola' +' '+ nombre)
-let edad = Number(prompt('Ingrese su Edad'))
-while (isNaN(edad)){
-    alert('Ingrese un Numero Porfavor')
-    edad = Number(prompt('Ingrese su Edad'))
-}
+
+pedir_edad()
 
 for (let i = 0; i <= 100; i++){
 
 
-if (edad < 17){
+if (edad < 18){
     alert('No puede ingresar al Establecimiento')
-    edad = Number(prompt('Ingrese su Edad'))
+    pedir_edad()
 
   }else if (edad >=18 ) {
     alert("Bienvenido al Establecimiento")
@@ -32,7 +29,14 @@ if (edad < 17){
   comprar ('Postres')
  
 
-  
+  function pedir_edad (){
+    edad = Number(prompt('Ingrese su Edad'))
+    while (isNaN(edad)){
+    alert('Ingrese un Numero Porfavor')
+    edad = Number(prompt('Ingrese su Edad'))
+}
+
+  }
 
  
 
